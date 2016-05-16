@@ -37,10 +37,12 @@ for i in range(len(dist_names)):
   if os.path.isdir(cell_name):
     os.system("rm -rf " + cell_name)
   os.mkdir(cell_name)
+  print 'creating vtk files', 
   for j in xrange(i_start, i_finish, 1):
-    fname = cell_name + '/' + cell_name + '_' + str(j).zfill(4)   
-    print fname   
+    fname = cell_name + '/' + cell_name + '_' + str(j)   
+    print '.',
     d = {}
     d["c"] = dist[:, j]
     pointsToVTK(fname, x, y, z, data = d)
+  print 
 
