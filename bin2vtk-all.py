@@ -32,7 +32,7 @@ for dist_name in dist_names:
 
   # get start and finish indices for a single cycle
   i_start = 0
-  i_finish = 1000
+  i_finish = dist.shape[1]
 
   # write vtk time series files
   if os.path.isdir(cell_name):
@@ -42,7 +42,7 @@ for dist_name in dist_names:
   for i in xrange(i_start, i_finish, 1):
     d = {}
     d["c"] = dist[:, i]
-    fname = cell_name + '/' + cell_name + '_' + str(i)   
+    fname = cell_name + '/' + cell_name + '_' + str(i).zfill(4)   
     pointsToVTK(fname, x, y, z, data = d)
-  print 'max = ', dist.max()
+  print 'max =', '{:0.3f}'.format(dist.max())
 
