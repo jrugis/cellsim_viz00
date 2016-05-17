@@ -39,7 +39,6 @@ def get_data(fname):
     for i in range(0, rows):
       t = f1.read(4)
       data[i,j] = struct.unpack('f', t)[0]
-      pass
   f1.close()
   return data
 ##################################################################
