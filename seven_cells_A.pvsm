@@ -2,7 +2,7 @@
   <ServerManagerState version="5.0.1">
     <Proxy group="animation" type="AnimationScene" id="263" servers="16">
       <Property name="AnimationTime" id="263.AnimationTime" number_of_elements="1">
-        <Element index="0" value="0"/>
+        <Element index="0" value="2399"/>
       </Property>
       <Property name="Cues" id="263.Cues" number_of_elements="2">
         <Proxy value="265"/>
@@ -9088,7 +9088,7 @@
         <Domain name="files" id="4720.FileName.files"/>
       </Property>
       <Property name="FileNameInfo" id="4720.FileNameInfo" number_of_elements="1">
-        <Element index="0" value="/home/jrugis/Desktop/nesi00119/viz/cellsim_viz00/cell01/cell01_0000.vtu"/>
+        <Element index="0" value="/home/jrugis/Desktop/nesi00119/viz/cellsim_viz00/cell01/cell01_2399.vtu"/>
       </Property>
       <Property name="TimestepValues" id="4720.TimestepValues" number_of_elements="2400">
         <Element index="0" value="0"/>
@@ -40471,7 +40471,7 @@
     <Proxy group="misc" type="TimeKeeper" id="259" servers="16">
       <Property name="SuppressedTimeSources" id="259.SuppressedTimeSources"/>
       <Property name="Time" id="259.Time" number_of_elements="1">
-        <Element index="0" value="0"/>
+        <Element index="0" value="2399"/>
         <Domain name="range" id="259.Time.range"/>
       </Property>
       <Property name="TimeLabel" id="259.TimeLabel" number_of_elements="1">
@@ -43264,16 +43264,16 @@
         <Element index="1" value="675"/>
       </Property>
       <Property name="ViewTime" id="5790.ViewTime" number_of_elements="1">
-        <Element index="0" value="0"/>
+        <Element index="0" value="2399"/>
         <Domain name="range" id="5790.ViewTime.range"/>
       </Property>
       <Property name="CameraClippingRange" id="5790.CameraClippingRange" number_of_elements="2">
-        <Element index="0" value="31.5744512921553"/>
-        <Element index="1" value="93.6517454978569"/>
+        <Element index="0" value="31.5744512921554"/>
+        <Element index="1" value="93.651745497857"/>
       </Property>
       <Property name="CameraClippingRangeInfo" id="5790.CameraClippingRangeInfo" number_of_elements="2">
-        <Element index="0" value="31.5744512921553"/>
-        <Element index="1" value="93.6517454978569"/>
+        <Element index="0" value="31.5744512921554"/>
+        <Element index="1" value="93.651745497857"/>
       </Property>
       <Property name="CameraFocalPoint" id="5790.CameraFocalPoint" number_of_elements="3">
         <Element index="0" value="-5"/>
@@ -43292,12 +43292,12 @@
         <Element index="0" value="22.2036497135293"/>
       </Property>
       <Property name="CameraPosition" id="5790.CameraPosition" number_of_elements="3">
-        <Element index="0" value="-5.36485"/>
+        <Element index="0" value="-5.36484999999998"/>
         <Element index="1" value="-38.7299"/>
         <Element index="2" value="-0.397529"/>
       </Property>
       <Property name="CameraPositionInfo" id="5790.CameraPositionInfo" number_of_elements="3">
-        <Element index="0" value="-5.36485"/>
+        <Element index="0" value="-5.36484999999998"/>
         <Element index="1" value="-38.7299"/>
         <Element index="2" value="-0.397529"/>
       </Property>
