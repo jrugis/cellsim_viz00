@@ -17,7 +17,6 @@ plt.rcParams['figure.figsize'] = 6, 15
 fig, plots = plt.subplots(len(dist_names)/2, sharex='col')
 fig.subplots_adjust(hspace = 0.4)
 
-i = 0
 for i in range(len(dist_names)/2):
   cfname = dist_names[2*i]
   vals = cfname.split('_')[2] + '_' + cfname.split('_')[3].split('.')[0]
