@@ -1,0 +1,56 @@
+cell01m
+  6859 total nodes
+  2864 surface nodes
+  0.02 surface node dnl minimum
+  5.92 surface node dnl maximum
+  1.61 surface node dnl average
+  41.8 surface node percentage of total nodes
+  45.2 apical percentage of surface nodes (1um dnl cutoff)
+cell02m
+  6406 total nodes
+  2905 surface nodes
+  0.01 surface node dnl minimum
+  7.09 surface node dnl maximum
+  1.85 surface node dnl average
+  45.3 surface node percentage of total nodes
+  38.2 apical percentage of surface nodes (1um dnl cutoff)
+cell03m
+  7794 total nodes
+  3261 surface nodes
+  0.01 surface node dnl minimum
+  5.63 surface node dnl maximum
+  1.81 surface node dnl average
+  41.8 surface node percentage of total nodes
+  38.6 apical percentage of surface nodes (1um dnl cutoff)
+cell04m
+  5970 total nodes
+  2640 surface nodes
+  0.01 surface node dnl minimum
+  5.71 surface node dnl maximum
+  2.03 surface node dnl average
+  44.2 surface node percentage of total nodes
+  34.5 apical percentage of surface nodes (1um dnl cutoff)
+cell05m
+  5883 total nodes
+  2672 surface nodes
+  0.01 surface node dnl minimum
+  5.46 surface node dnl maximum
+  1.92 surface node dnl average
+  45.4 surface node percentage of total nodes
+  33.1 apical percentage of surface nodes (1um dnl cutoff)
+cell06m
+  7087 total nodes
+  3037 surface nodes
+  0.03 surface node dnl minimum
+  5.76 surface node dnl maximum
+  2.06 surface node dnl average
+  42.9 surface node percentage of total nodes
+  33.1 apical percentage of surface nodes (1um dnl cutoff)
+cell07m
+  7395 total nodes
+  3071 surface nodes
+  0.02 surface node dnl minimum
+  5.77 surface node dnl maximum
+  2.31 surface node dnl average
+  41.5 surface node percentage of total nodes
+  26.6 apical percentage of surface nodes (1um dnl cutoff)

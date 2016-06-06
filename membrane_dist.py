@@ -13,7 +13,7 @@ def get_membrane_data(fname):
   for line in f1: 
     if line.startswith("$Nodes"): break
   ncount = int(f1.next())
-  print " ", ncount, "nodes"
+  print " ", ncount, "total nodes"
 
   # identify the surface nodes
   sn = np.zeros(ncount, dtype = np.uint8)
@@ -47,10 +47,15 @@ def get_membrane_data(fname):
     if sn[n] == 1:
       sndnl[i] = dnl[n]
       i += 1
-  print " ", np.amin(sndnl), "minimum"
-  print " ", np.amax(sndnl), "maximum"
 
   f1.close # close the mesh file 
+  print "  %.2f surface node dnl minimum" % np.amin(sndnl)
+  print "  %.2f surface node dnl maximum" % np.amax(sndnl)
+  print "  %.2f surface node dnl average" % np.mean(sndnl)
+  print "  %.1f surface node percentage of total nodes" % (100.0 * sncount / ncount)
+  app = 100.0 * np.histogram(sndnl, bins=8, range=(0.0, 8.0))[0][0] / sncount
+  print "  %.1f apical percentage of surface nodes (1um dnl cutoff)" % app
+
   return sndnl
 
 ##################################################################
