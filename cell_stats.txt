@@ -1,56 +1,89 @@
 cell01m
-  6859 total nodes
+  6859 nodes
+  723.4 volume (cubic um3)
+  9.5 nodes per volume (nodes / cubic um3)
   2864 surface nodes
-  0.02 surface node dnl minimum
-  5.92 surface node dnl maximum
-  1.61 surface node dnl average
+  395.2 surface area (square um)
+  7.2 nodes per surface area (nodes / square um)
+  0.02 surface node dnl minimum (um)
+  5.92 surface node dnl maximum (um)
+  1.61 surface node dnl average (um)
   41.8 surface node percentage of total nodes
-  45.2 apical percentage of surface nodes (1um dnl cutoff)
+  45.3 apical percentage of surface nodes (1um dnl cutoff)
 cell02m
-  6406 total nodes
+  6406 nodes
+  801.9 volume (cubic um3)
+  8.0 nodes per volume (nodes / cubic um3)
   2905 surface nodes
-  0.01 surface node dnl minimum
-  7.09 surface node dnl maximum
-  1.85 surface node dnl average
+  387.2 surface area (square um)
+  7.5 nodes per surface area (nodes / square um)
+  0.01 surface node dnl minimum (um)
+  7.09 surface node dnl maximum (um)
+  1.84 surface node dnl average (um)
   45.3 surface node percentage of total nodes
   38.2 apical percentage of surface nodes (1um dnl cutoff)
 cell03m
-  7794 total nodes
+  7794 nodes
+  907.2 volume (cubic um3)
+  8.6 nodes per volume (nodes / cubic um3)
   3261 surface nodes
-  0.01 surface node dnl minimum
-  5.63 surface node dnl maximum
-  1.81 surface node dnl average
+  475.6 surface area (square um)
+  6.9 nodes per surface area (nodes / square um)
+  0.01 surface node dnl minimum (um)
+  5.63 surface node dnl maximum (um)
+  1.81 surface node dnl average (um)
   41.8 surface node percentage of total nodes
   38.6 apical percentage of surface nodes (1um dnl cutoff)
 cell04m
-  5970 total nodes
+  5970 nodes
+  874.7 volume (cubic um3)
+  6.8 nodes per volume (nodes / cubic um3)
   2640 surface nodes
-  0.01 surface node dnl minimum
-  5.71 surface node dnl maximum
-  2.03 surface node dnl average
+  503.6 surface area (square um)
+  5.2 nodes per surface area (nodes / square um)
+  0.01 surface node dnl minimum (um)
+  5.71 surface node dnl maximum (um)
+  2.03 surface node dnl average (um)
   44.2 surface node percentage of total nodes
   34.5 apical percentage of surface nodes (1um dnl cutoff)
 cell05m
-  5883 total nodes
+  5883 nodes
+  311.8 volume (cubic um3)
+  18.9 nodes per volume (nodes / cubic um3)
   2672 surface nodes
-  0.01 surface node dnl minimum
-  5.46 surface node dnl maximum
-  1.92 surface node dnl average
+  284.3 surface area (square um)
+  9.4 nodes per surface area (nodes / square um)
+  0.01 surface node dnl minimum (um)
+  5.46 surface node dnl maximum (um)
+  1.92 surface node dnl average (um)
   45.4 surface node percentage of total nodes
   33.1 apical percentage of surface nodes (1um dnl cutoff)
 cell06m
-  7087 total nodes
+  7087 nodes
+  756.7 volume (cubic um3)
+  9.4 nodes per volume (nodes / cubic um3)
   3037 surface nodes
-  0.03 surface node dnl minimum
-  5.76 surface node dnl maximum
-  2.06 surface node dnl average
+  407.5 surface area (square um)
+  7.5 nodes per surface area (nodes / square um)
+  0.03 surface node dnl minimum (um)
+  5.76 surface node dnl maximum (um)
+  2.06 surface node dnl average (um)
   42.9 surface node percentage of total nodes
   33.1 apical percentage of surface nodes (1um dnl cutoff)
 cell07m
-  7395 total nodes
+  7395 nodes
+  598.7 volume (cubic um3)
+  12.4 nodes per volume (nodes / cubic um3)
   3071 surface nodes
-  0.02 surface node dnl minimum
-  5.77 surface node dnl maximum
-  2.31 surface node dnl average
+  356.3 surface area (square um)
+  8.6 nodes per surface area (nodes / square um)
+  0.02 surface node dnl minimum (um)
+  5.77 surface node dnl maximum (um)
+  2.31 surface node dnl average (um)
   41.5 surface node percentage of total nodes
   26.6 apical percentage of surface nodes (1um dnl cutoff)
+coordinates bounding box (um):
+[[-18.54   6.89 -12.54]
+ [  7.48  33.64  11.45]]
+coordinates bounding box center (um):
+[ -5.53  20.27  -0.54]
