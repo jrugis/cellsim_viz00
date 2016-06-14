@@ -27,7 +27,7 @@ for i in range(len(dist_names)/2):
   plots[i, 0].set_title(cell_name + '_' + vals)
 
   cdata = cs.get_data(cfname)
-  plots[i, 0].set_ylim([0.0, 0.8])
+  plots[i, 0].set_ylim([0.0, 1.0])
   plots[i, 0].set_ylabel('Ca')
   plots[i, 0].plot(np.transpose(cdata), lw=0.5)
 
