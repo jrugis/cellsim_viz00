@@ -76,7 +76,7 @@ def create_normals(nodes, tris):
     v2 = nodes[tris[i][2]] - nodes[tris[i][0]]
     temp = np.cross(v1, v2) # assumes counter-clockwise ordering
     normals[i] = temp / np.sqrt(temp.dot(temp)) # normalize
-  return -1.0 * normals
+  return normals
 
 ##################################################################
 # get edge and triangle fans at a node
@@ -135,7 +135,7 @@ def calc_wangle(n0, n1, v0, v1, e0, e1):
   temp = np.dot(n1, temp)
   if temp > 1.0: temp = 1.0 # check precision error bound
   temp = np.arccos(temp)
-  if temp > (np.pi / 2.0): # concave?
+  if temp < (np.pi / 2.0): # concave?
     angle *= -1.0
 
   # calculate edge weight
@@ -156,12 +156,12 @@ def calc_curvature(nodes, tris, normals):
     wangle_sum = 0.0
     area_sum = 0.0
     for i in range(fan_size):
-      n0 = normals[tri_fan[i]]
-      n1 = normals[tri_fan[np.mod(i + 1, fan_size)]] # normals
+      n0 = normals[tri_fan[np.mod(i - 1, fan_size)]]
+      n1 = normals[tri_fan[i]] # normals
       v0 = nodes[node_fan[np.mod(i - 1, fan_size)]]  # flap verticies   
       v1 = nodes[node_fan[np.mod(i + 1, fan_size)]]      
       e0 = nodes[node]                               # edge verticies
-      e1 = nodes[node_fan[i]]      
+      e1 = nodes[node_fan[i]]
       wangle_sum += calc_wangle(n0, n1, v0, v1, e0, e1)
       area_sum += calc_area(nodes[tris[tri_fan[i]]])
     curvatures[node] = 0.75 * wangle_sum / area_sum
@@ -186,8 +186,8 @@ for i in range(1, 8):
   print "          curvature mean: ", curvatures.mean()
   print "           curvature max: ", curvatures.max()
   print "        curvature median: ", np.median(curvatures)
-  plt.hist(curvatures, bins=12, range=(-3.0, 3.0), rwidth=0.9)
-  plt.show()
+  #plt.hist(curvatures, bins=12, range=(-3.0, 3.0), rwidth=0.9)
+  #plt.show()
 
   # write out to vtk file
   fname = cell_name
@@ -195,31 +195,4 @@ for i in range(1, 8):
   d["curvature"] = curvatures
   nodes = np.transpose(nodes)
   pointsToVTK(fname, nodes[0,:], nodes[1,:], nodes[2,:], data = d) # write out vtk file
-
-#cell_name = "sphere"
-#mesh_name =  cell_name + ".msh"
-
-#print mesh_name
-#nodes, tris = get_mesh_tris(mesh_name)
-##print "      surface node count: ", nodes.shape[0]
-##print "  surface triangle count: ", tris.shape[0]
-
-#normals = create_normals(nodes, tris)
-#curvatures = calc_curvature(nodes, tris, normals)
-#print "           curvature min: ", curvatures.min()
-#print "          curvature mean: ", curvatures.mean()
-#print "           curvature max: ", curvatures.max()
-##print "        curvature median: ", np.median(curvatures)
-##plt.hist(curvatures, bins=16, range=(-3.0, 3.0), rwidth=0.9)
-##plt.show()
-
-## write out to vtk file
-#fname = cell_name
-#d = {}
-#d["curvature"] = curvatures
-#nodes = np.transpose(nodes)
-#pointsToVTK(fname, nodes[0,:], nodes[1,:], nodes[2,:], data = d) # write out vtk file
-
-
-
 

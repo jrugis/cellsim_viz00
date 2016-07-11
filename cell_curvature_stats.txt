@@ -1,0 +1,35 @@
+cell01m_HARMONIC_100p.msh
+           curvature min:  -0.714116
+          curvature mean:  0.118373
+           curvature max:  1.40219
+        curvature median:  0.0773222
+cell02m_HARMONIC_100p.msh
+           curvature min:  -0.90677
+          curvature mean:  0.0934005
+           curvature max:  2.07857
+        curvature median:  0.0415101
+cell03m_HARMONIC_100p.msh
+           curvature min:  -1.15954
+          curvature mean:  0.107836
+           curvature max:  1.53312
+        curvature median:  0.0684393
+cell04m_HARMONIC_100p.msh
+           curvature min:  -0.707088
+          curvature mean:  0.0942965
+           curvature max:  1.42851
+        curvature median:  0.0595963
+cell05m_HARMONIC_100p.msh
+           curvature min:  -1.06695
+          curvature mean:  0.132757
+           curvature max:  2.17648
+        curvature median:  0.0744229
+cell06m_HARMONIC_100p.msh
+           curvature min:  -0.57119
+          curvature mean:  0.103696
+           curvature max:  1.80351
+        curvature median:  0.0570882
+cell07m_HARMONIC_100p.msh
+           curvature min:  -0.752668
+          curvature mean:  0.11588
+           curvature max:  1.84104
+        curvature median:  0.0714387
