@@ -35,7 +35,7 @@ def flip_tris(fname):
 # main program
 ##################################################################
 
-cell_name = "cell07"
+cell_name = "cell04"
 mesh_name =  cell_name + "m_HARMONIC_100p"
 
 print mesh_name

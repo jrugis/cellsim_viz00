@@ -10,6 +10,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from pyevtk.hl import pointsToVTK
+import os
 
 ##################################################################
 # get surface nodes and triangles
@@ -171,6 +172,11 @@ def calc_curvature(nodes, tris, normals):
 # main program
 ##################################################################
 
+plt.rcParams['figure.figsize'] = 6, 14
+fig, plots = plt.subplots(7, sharex='col')
+fig.suptitle("Surface Curvature Histograms")
+plots[6].set_xlabel("surface curvature")
+
 for i in range(1, 8):
   cell_name = "cell0" + str(i)
   mesh_name =  cell_name + "m_HARMONIC_100p.msh"
@@ -186,8 +192,10 @@ for i in range(1, 8):
   print "          curvature mean: ", curvatures.mean()
   print "           curvature max: ", curvatures.max()
   print "        curvature median: ", np.median(curvatures)
-  #plt.hist(curvatures, bins=12, range=(-3.0, 3.0), rwidth=0.9)
-  #plt.show()
+
+  plots[7-i].set_ylim([0, 450])
+  plots[7-i].set_ylabel(cell_name)
+  plots[7-i].hist(curvatures, bins=61, range=(-1.0, 1.0))
 
   # write out to vtk file
   fname = cell_name
@@ -195,4 +203,9 @@ for i in range(1, 8):
   d["curvature"] = curvatures
   nodes = np.transpose(nodes)
   pointsToVTK(fname, nodes[0,:], nodes[1,:], nodes[2,:], data = d) # write out vtk file
+
+open('temp.pdf', 'w').close()
+plt.savefig('temp.pdf')
+os.rename('temp.pdf', 'curvature_histograms.pdf')
+plt.show()
 
