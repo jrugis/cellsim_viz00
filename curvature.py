@@ -169,6 +169,35 @@ def calc_curvature(nodes, tris, normals):
   return curvatures
 
 ##################################################################
+# write out a mesh file with node attributes 
+def save_mesh(cell_name, nodes, tris, curvatures):
+  fname = cell_name + "_curvature.msh"
+  f1 = open(fname, 'w')
+  f1.write("$MeshFormat\n")
+  f1.write("2.2 0 8\n")
+  f1.write("$EndMeshFormat\n")
+  f1.write("$Nodes\n")
+  ncount = len(nodes)
+  f1.write(str(ncount) + "\n")
+  for i in range(ncount):
+    f1.write(str(i+1)+" "+str(nodes[i, 0])+" "+str(nodes[i, 1])+" "+str(nodes[i, 2])+"\n")
+  f1.write("$EndNodes\n")
+  f1.write("$Elements\n")
+  ecount = len(tris)
+  f1.write(str(ecount) + "\n")
+  for i in range(ecount):
+    f1.write(str(i+1)+" 2 2 101 100 "+str(tris[i, 0]+1)+" "+str(tris[i, 1]+1)+" "+str(tris[i, 2]+1)+"\n")
+  f1.write("$EndElements\n")
+  f1.write('$NodeData\n1\n"curvature"\n1\n0.0\n3\n0\n1\n')
+  ccount = len(curvatures)
+  f1.write(str(ccount) + "\n")
+  for i in range(ccount):
+    f1.write(str(i+1)+" "+str(curvatures[i])+"\n")
+  f1.write("$EndNodeData\n")
+  f1.close()
+  return
+
+##################################################################
 # main program
 ##################################################################
 
@@ -196,6 +225,8 @@ for i in range(1, 8):
   plots[7-i].set_ylim([0, 450])
   plots[7-i].set_ylabel(cell_name)
   plots[7-i].hist(curvatures, bins=61, range=(-1.0, 1.0))
+
+  save_mesh(cell_name, nodes, tris, curvatures)
 
   # write out to vtk file
   fname = cell_name
